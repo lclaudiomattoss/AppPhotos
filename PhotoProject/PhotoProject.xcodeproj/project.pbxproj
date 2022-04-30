@@ -15,6 +15,8 @@
 		A22B9A2E281D6A1600FC5357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22B9A2D281D6A1600FC5357 /* Assets.xcassets */; };
 		A22B9A31281D6A1600FC5357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22B9A2F281D6A1600FC5357 /* LaunchScreen.storyboard */; };
 		A22B9A3C281D727100FC5357 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22B9A3B281D727100FC5357 /* GoogleService-Info.plist */; };
+		A27BA377281D7E25000F8D6A /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */; };
+		A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27BA378281D7E45000F8D6A /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A22B9A30281D6A1600FC5357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22B9A32281D6A1600FC5357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22B9A3B281D727100FC5357 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
+		A27BA378281D7E45000F8D6A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A3541598C4442B89A3665A3C /* Pods-PhotoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoProject.debug.xcconfig"; path = "Target Support Files/Pods-PhotoProject/Pods-PhotoProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE5D019535DA4C65F38B2F6 /* Pods_PhotoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A22B9A2A281D6A1400FC5357 /* Main.storyboard */,
+				A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A22B9A28281D6A1400FC5357 /* ViewController.swift */,
+				A27BA378281D7E45000F8D6A /* RegisterVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 				A22B9A2E281D6A1600FC5357 /* Assets.xcassets in Resources */,
 				A22B9A2C281D6A1400FC5357 /* Main.storyboard in Resources */,
 				A22B9A3C281D727100FC5357 /* GoogleService-Info.plist in Resources */,
+				A27BA377281D7E25000F8D6A /* RegisterVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +244,7 @@
 				A22B9A29281D6A1400FC5357 /* ViewController.swift in Sources */,
 				A22B9A25281D6A1400FC5357 /* AppDelegate.swift in Sources */,
 				A22B9A27281D6A1400FC5357 /* SceneDelegate.swift in Sources */,
+				A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
