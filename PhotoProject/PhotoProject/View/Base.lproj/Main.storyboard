@@ -3,11 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,18 +76,29 @@
                             <constraint firstItem="0s1-nr-ZzG" firstAttribute="leading" secondItem="idm-d8-L78" secondAttribute="leading" id="wBC-wm-sW0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="79l-6j-Geu"/>
+                    <navigationItem key="navigationItem" title="Login" id="79l-6j-Geu"/>
                     <connections>
                         <outlet property="emailTextField" destination="idm-d8-L78" id="nYk-YO-6cG"/>
                         <outlet property="enterButton" destination="fpC-Ug-DjZ" id="NXs-iW-cvt"/>
                         <outlet property="logoImageView" destination="Uux-rJ-bwM" id="4u3-bq-zI0"/>
                         <outlet property="passwordTextField" destination="0s1-nr-ZzG" id="frC-8n-U7Z"/>
                         <outlet property="registerButton" destination="b5n-Kd-4du" id="ZV5-M7-ePc"/>
+                        <segue destination="5iB-pI-uNR" kind="show" identifier="RegisterVC" id="kaV-yr-B8V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="85.714285714285708"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="QKu-zq-Sbo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RegisterVC" storyboardName="RegisterVC" referencedIdentifier="RegisterVC" id="5iB-pI-uNR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TYC-0O-tBY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QkA-hu-6qR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v2p-SO-nU7">
@@ -96,6 +108,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Wh-KE-6Fx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -109,5 +124,8 @@
     </scenes>
     <resources>
         <image name="logo" width="800" height="274"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

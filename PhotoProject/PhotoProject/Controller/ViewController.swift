@@ -23,13 +23,16 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     
     @IBAction func tappedEnterButton(_ sender: Any) {
     }
     
     @IBAction func tappedRegisterButtonn(_ sender: Any) {
-        let register:RegisterVC? = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
-        self.present(register ?? UIViewController() , animated: true, completion: nil)
+        performSegue(withIdentifier: "RegisterVC", sender: self)
     }
 
 
