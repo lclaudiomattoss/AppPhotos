@@ -91,11 +91,22 @@
                         <outlet property="passwordTextField" destination="0s1-nr-ZzG" id="frC-8n-U7Z"/>
                         <outlet property="registerButton" destination="b5n-Kd-4du" id="ZV5-M7-ePc"/>
                         <segue destination="5iB-pI-uNR" kind="show" identifier="RegisterVC" id="kaV-yr-B8V"/>
+                        <segue destination="AGG-pX-6fh" kind="show" identifier="TabBarController" id="0l8-SG-bSd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="85.714285714285708"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="JYq-ei-m0T">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TabBarController" storyboardName="TabBarController" id="AGG-pX-6fh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gdf-Tb-t5w"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqQ-rM-vDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1588" y="5"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="QKu-zq-Sbo">

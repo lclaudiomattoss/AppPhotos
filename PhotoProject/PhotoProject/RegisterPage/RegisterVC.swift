@@ -18,7 +18,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var auth: Auth!
+    var auth: Auth?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class RegisterVC: UIViewController {
             if let email = emailTextField.text{
                 if let password = passwordTextField.text{
                     
-                    auth.createUser(withEmail: email, password: password) { (user, error) in
+                    auth?.createUser(withEmail: email, password: password) { (user, error) in
                         if error == nil{
                             print("Sucesso ao cadastrar usuário")
                         }else{

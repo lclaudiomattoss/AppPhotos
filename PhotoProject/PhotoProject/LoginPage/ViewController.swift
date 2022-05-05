@@ -17,11 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
-    var auth: Auth!
+    var auth: Auth?
+    
+    func LoginControl(){
+        auth?.addStateDidChangeListener({ autentication, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "TabBarController", sender: nil)
+            }else{
+                print("O usuário não está logado")
+            }
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.LoginControl()
         auth = Auth.auth()
         
     }
@@ -30,15 +40,27 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    @IBAction func unwindToLogin(_ unwindSegue: UIStoryboardSegue) {
+        
+        do {
+            try auth?.signOut()
+        } catch {
+            print("Erro ao deslogar usuário!")
+        }
+        
+    }
+    
     
     @IBAction func tappedEnterButton(_ sender: Any) {
         
         if let email = emailTextField.text{
             if let password = passwordTextField.text{
                 
-                auth.signIn(withEmail: email, password: password) { (user,error) in
+                
+                auth?.signIn(withEmail: email, password: password) { (user,error) in
                     if error == nil{
                         print("Sucesso ao logar usuário")
+                        self.performSegue(withIdentifier: "TabBarController", sender: nil)
                     }else{
                         print("Erro ao logar usuário")
                     }
