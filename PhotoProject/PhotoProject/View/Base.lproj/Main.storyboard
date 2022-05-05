@@ -23,57 +23,64 @@
                                     <constraint firstAttribute="height" constant="100" id="lJK-ap-PTA"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idm-d8-L78">
-                                <rect key="frame" x="57" y="298" width="300" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0s1-nr-ZzG">
-                                <rect key="frame" x="57" y="357" width="300" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-Ug-DjZ">
-                                <rect key="frame" x="57" y="416" width="300" height="30"/>
-                                <color key="backgroundColor" red="0.3365379174" green="0.59515247800000004" blue="0.64357366410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Logar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedEnterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3u-Xg-CXk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5n-Kd-4du">
-                                <rect key="frame" x="57" y="456" width="300" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Não tem conta? Faça seu cadastro">
-                                    <color key="titleColor" red="0.3365379174" green="0.59515247800000004" blue="0.64357366410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedRegisterButtonn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qa6-W4-xDP"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PkQ-Z0-WuL">
+                                <rect key="frame" x="50" y="278" width="314" height="236.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idm-d8-L78">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0s1-nr-ZzG">
+                                        <rect key="frame" x="0.0" y="54" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-Ug-DjZ">
+                                        <rect key="frame" x="0.0" y="108" width="314" height="34"/>
+                                        <color key="backgroundColor" red="0.3365379174" green="0.59515247800000004" blue="0.64357366410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Logar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedEnterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3u-Xg-CXk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5n-Kd-4du">
+                                        <rect key="frame" x="0.0" y="162" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Não tem conta? Faça seu cadastro">
+                                            <color key="titleColor" red="0.3365379174" green="0.59515247800000004" blue="0.64357366410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedRegisterButtonn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qa6-W4-xDP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJR-kS-PfC">
+                                        <rect key="frame" x="0.0" y="216" width="314" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.84993273020000004" green="0.2882379591" blue="0.18814629320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b5n-Kd-4du" firstAttribute="height" secondItem="idm-d8-L78" secondAttribute="height" id="OfF-Bd-BeT"/>
+                                    <constraint firstItem="fpC-Ug-DjZ" firstAttribute="height" secondItem="idm-d8-L78" secondAttribute="height" id="eUZ-Bo-mcd"/>
+                                    <constraint firstItem="0s1-nr-ZzG" firstAttribute="height" secondItem="idm-d8-L78" secondAttribute="height" id="j0M-CP-w47"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="idm-d8-L78" firstAttribute="top" secondItem="Uux-rJ-bwM" secondAttribute="bottom" constant="30" id="1nL-y6-d2y"/>
-                            <constraint firstItem="idm-d8-L78" firstAttribute="trailing" secondItem="Uux-rJ-bwM" secondAttribute="trailing" id="4v2-ro-IL2"/>
-                            <constraint firstItem="fpC-Ug-DjZ" firstAttribute="trailing" secondItem="0s1-nr-ZzG" secondAttribute="trailing" id="F8V-wX-3P0"/>
-                            <constraint firstItem="fpC-Ug-DjZ" firstAttribute="leading" secondItem="0s1-nr-ZzG" secondAttribute="leading" id="Ilo-b1-VDM"/>
-                            <constraint firstItem="b5n-Kd-4du" firstAttribute="top" secondItem="fpC-Ug-DjZ" secondAttribute="bottom" constant="10" id="JX5-ni-7gT"/>
-                            <constraint firstItem="idm-d8-L78" firstAttribute="leading" secondItem="Uux-rJ-bwM" secondAttribute="leading" id="Ky4-xr-mbd"/>
-                            <constraint firstItem="0s1-nr-ZzG" firstAttribute="trailing" secondItem="idm-d8-L78" secondAttribute="trailing" id="Z1V-cE-xfQ"/>
+                            <constraint firstItem="PkQ-Z0-WuL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="7YH-Tl-gFc"/>
+                            <constraint firstItem="PkQ-Z0-WuL" firstAttribute="top" secondItem="Uux-rJ-bwM" secondAttribute="bottom" constant="10" id="H3U-L9-ykk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PkQ-Z0-WuL" secondAttribute="trailing" constant="50" id="Xnc-Dz-KPG"/>
                             <constraint firstItem="Uux-rJ-bwM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b6b-yb-Cjg"/>
-                            <constraint firstItem="fpC-Ug-DjZ" firstAttribute="top" secondItem="0s1-nr-ZzG" secondAttribute="bottom" constant="25" id="cGG-8i-mM8"/>
                             <constraint firstItem="Uux-rJ-bwM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="iJ1-89-5sX"/>
-                            <constraint firstItem="b5n-Kd-4du" firstAttribute="trailing" secondItem="fpC-Ug-DjZ" secondAttribute="trailing" id="myG-Jp-IbD"/>
-                            <constraint firstItem="0s1-nr-ZzG" firstAttribute="top" secondItem="idm-d8-L78" secondAttribute="bottom" constant="25" id="p3Y-Kj-tCU"/>
-                            <constraint firstItem="b5n-Kd-4du" firstAttribute="leading" secondItem="fpC-Ug-DjZ" secondAttribute="leading" id="pHg-qf-HKC"/>
-                            <constraint firstItem="0s1-nr-ZzG" firstAttribute="leading" secondItem="idm-d8-L78" secondAttribute="leading" id="wBC-wm-sW0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="79l-6j-Geu"/>

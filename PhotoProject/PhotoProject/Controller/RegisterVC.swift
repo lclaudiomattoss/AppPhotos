@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 
 class RegisterVC: UIViewController {
@@ -14,13 +15,15 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    var auth: Auth!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        auth = Auth.auth()
     
     }
     
@@ -30,6 +33,29 @@ class RegisterVC: UIViewController {
     
 
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        
+        if let name = nameTextField.text{
+            if let email = emailTextField.text{
+                if let password = passwordTextField.text{
+                    
+                    auth.createUser(withEmail: email, password: password) { (user, error) in
+                        if error == nil{
+                            print("Sucesso ao cadastrar usuário")
+                        }else{
+                            print("Erro ao cadastrar usuário")
+                        }
+                    }
+                    
+                }else{
+                    print("Preencha a sua senha")
+                }
+            }else{
+                print("Preencha o seu email")
+            }
+        }else{
+            print("Preencha o seu nome")
+        }
+        
     }
             
                     
