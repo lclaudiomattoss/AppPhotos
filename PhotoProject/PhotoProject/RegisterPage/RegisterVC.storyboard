@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-9u-Saq">
-                                <rect key="frame" x="57" y="124" width="300" height="100"/>
+                                <rect key="frame" x="50" y="124" width="314" height="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="GjF-ps-mV2"/>
                                     <constraint firstAttribute="height" constant="100" id="VkT-Hm-oJW"/>
                                 </constraints>
                             </imageView>
@@ -43,7 +43,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-7b-rQ4">
                                         <rect key="frame" x="0.0" y="162" width="314" height="34"/>
-                                        <color key="backgroundColor" red="0.3365379174" green="0.59515247800000004" blue="0.64357366410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Cadastrar">
@@ -70,8 +70,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xuT-9u-Saq" firstAttribute="trailing" secondItem="zYq-DX-SHX" secondAttribute="trailing" id="04J-ZU-BqV"/>
                             <constraint firstItem="xuT-9u-Saq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Cfi-BW-c2r"/>
                             <constraint firstItem="zYq-DX-SHX" firstAttribute="top" secondItem="xuT-9u-Saq" secondAttribute="bottom" constant="10" id="Jt1-5z-vCe"/>
+                            <constraint firstItem="xuT-9u-Saq" firstAttribute="leading" secondItem="zYq-DX-SHX" secondAttribute="leading" id="KxM-QO-52j"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zYq-DX-SHX" secondAttribute="trailing" constant="50" id="tXb-0n-WkC"/>
                             <constraint firstItem="xuT-9u-Saq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="x12-HR-pkK"/>
                             <constraint firstItem="zYq-DX-SHX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="xmp-QU-7da"/>
@@ -95,6 +97,9 @@
         <image name="logo" width="800" height="274"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

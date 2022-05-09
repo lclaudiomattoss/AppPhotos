@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72EFA9062A330B577FCD4155 /* Pods_PhotoProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE5D019535DA4C65F38B2F6 /* Pods_PhotoProject.framework */; };
+		A2183C1D282856DA00D0AA3E /* ChoosePictureVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2183C1C282856DA00D0AA3E /* ChoosePictureVC.storyboard */; };
+		A2183C1F2828571000D0AA3E /* ChoosePictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2183C1E2828571000D0AA3E /* ChoosePictureVC.swift */; };
 		A22B9A25281D6A1400FC5357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B9A24281D6A1400FC5357 /* AppDelegate.swift */; };
 		A22B9A27281D6A1400FC5357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B9A26281D6A1400FC5357 /* SceneDelegate.swift */; };
 		A22B9A29281D6A1400FC5357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B9A28281D6A1400FC5357 /* ViewController.swift */; };
@@ -22,12 +24,18 @@
 		A24701B52823989B0019BC7B /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24701B42823989B0019BC7B /* HomeVC.storyboard */; };
 		A24701BD2823A40F0019BC7B /* ConfigVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24701BC2823A40F0019BC7B /* ConfigVC.storyboard */; };
 		A24701BF2823A4250019BC7B /* ConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24701BE2823A4250019BC7B /* ConfigVC.swift */; };
+		A262AD322829689000299F60 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262AD302829689000299F60 /* UserTableViewCell.swift */; };
+		A262AD332829689000299F60 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A262AD312829689000299F60 /* UserTableViewCell.xib */; };
 		A27BA377281D7E25000F8D6A /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */; };
 		A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27BA378281D7E45000F8D6A /* RegisterVC.swift */; };
+		A2F6645F2828D230002F4E81 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */; };
+		A2F664602828D230002F4E81 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8285E73189CFF510187D1DD0 /* Pods-PhotoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoProject.release.xcconfig"; path = "Target Support Files/Pods-PhotoProject/Pods-PhotoProject.release.xcconfig"; sourceTree = "<group>"; };
+		A2183C1C282856DA00D0AA3E /* ChoosePictureVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePictureVC.storyboard; sourceTree = "<group>"; };
+		A2183C1E2828571000D0AA3E /* ChoosePictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePictureVC.swift; sourceTree = "<group>"; };
 		A22B9A21281D6A1400FC5357 /* PhotoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22B9A24281D6A1400FC5357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A22B9A26281D6A1400FC5357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +52,12 @@
 		A24701B42823989B0019BC7B /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
 		A24701BC2823A40F0019BC7B /* ConfigVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigVC.storyboard; sourceTree = "<group>"; };
 		A24701BE2823A4250019BC7B /* ConfigVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVC.swift; sourceTree = "<group>"; };
+		A262AD302829689000299F60 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		A262AD312829689000299F60 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		A27BA378281D7E45000F8D6A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		A3541598C4442B89A3665A3C /* Pods-PhotoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoProject.debug.xcconfig"; path = "Target Support Files/Pods-PhotoProject/Pods-PhotoProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE5D019535DA4C65F38B2F6 /* Pods_PhotoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +90,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A2183C1B2828567C00D0AA3E /* ChoosePicture */ = {
+			isa = PBXGroup;
+			children = (
+				A2183C1C282856DA00D0AA3E /* ChoosePictureVC.storyboard */,
+				A2183C1E2828571000D0AA3E /* ChoosePictureVC.swift */,
+			);
+			path = ChoosePicture;
+			sourceTree = "<group>";
+		};
 		A22B9A18281D6A1400FC5357 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +120,7 @@
 		A22B9A23281D6A1400FC5357 /* PhotoProject */ = {
 			isa = PBXGroup;
 			children = (
+				A2183C1B2828567C00D0AA3E /* ChoosePicture */,
 				A24701A8282393590019BC7B /* TabBar */,
 				A22B9A3A281D6F4000FC5357 /* RegisterPage */,
 				A22B9A39281D6F3A00FC5357 /* LoginPage */,
@@ -145,6 +167,7 @@
 		A24701AD282394010019BC7B /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A2F6645C2828D1F0002F4E81 /* HomeCell */,
 				A24701AB282393930019BC7B /* HomeVC.swift */,
 				A24701B42823989B0019BC7B /* HomeVC.storyboard */,
 			);
@@ -154,6 +177,7 @@
 		A24701AE282394140019BC7B /* UsersPage */ = {
 			isa = PBXGroup;
 			children = (
+				A262AD2F2829687500299F60 /* UserCell */,
 				A24701AF282394940019BC7B /* UsersVC.swift */,
 				A24701B22823988A0019BC7B /* UsersVC.storyboard */,
 			);
@@ -167,6 +191,24 @@
 				A24701BE2823A4250019BC7B /* ConfigVC.swift */,
 			);
 			path = ConfigPage;
+			sourceTree = "<group>";
+		};
+		A262AD2F2829687500299F60 /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				A262AD302829689000299F60 /* UserTableViewCell.swift */,
+				A262AD312829689000299F60 /* UserTableViewCell.xib */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
+		A2F6645C2828D1F0002F4E81 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */,
+				A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */,
+			);
+			path = HomeCell;
 			sourceTree = "<group>";
 		};
 		D66CD380314BA61270249BBA /* Frameworks */ = {
@@ -189,6 +231,7 @@
 				A22B9A1E281D6A1400FC5357 /* Frameworks */,
 				A22B9A1F281D6A1400FC5357 /* Resources */,
 				EB5BD752F1A12C83F65130A9 /* [CP] Embed Pods Frameworks */,
+				88628497009780776E0B0E24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,9 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F664602828D230002F4E81 /* HomeTableViewCell.xib in Resources */,
 				A22B9A31281D6A1600FC5357 /* LaunchScreen.storyboard in Resources */,
 				A22B9A2E281D6A1600FC5357 /* Assets.xcassets in Resources */,
 				A24701BD2823A40F0019BC7B /* ConfigVC.storyboard in Resources */,
+				A262AD332829689000299F60 /* UserTableViewCell.xib in Resources */,
+				A2183C1D282856DA00D0AA3E /* ChoosePictureVC.storyboard in Resources */,
 				A24701B52823989B0019BC7B /* HomeVC.storyboard in Resources */,
 				A22B9A2C281D6A1400FC5357 /* Main.storyboard in Resources */,
 				A24701B32823988A0019BC7B /* UsersVC.storyboard in Resources */,
@@ -274,6 +320,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		88628497009780776E0B0E24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoProject/Pods-PhotoProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoProject/Pods-PhotoProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoProject/Pods-PhotoProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB5BD752F1A12C83F65130A9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,8 +365,11 @@
 				A22B9A29281D6A1400FC5357 /* ViewController.swift in Sources */,
 				A24701AC282393930019BC7B /* HomeVC.swift in Sources */,
 				A22B9A25281D6A1400FC5357 /* AppDelegate.swift in Sources */,
+				A262AD322829689000299F60 /* UserTableViewCell.swift in Sources */,
 				A24701BF2823A4250019BC7B /* ConfigVC.swift in Sources */,
 				A22B9A27281D6A1400FC5357 /* SceneDelegate.swift in Sources */,
+				A2F6645F2828D230002F4E81 /* HomeTableViewCell.swift in Sources */,
+				A2183C1F2828571000D0AA3E /* ChoosePictureVC.swift in Sources */,
 				A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

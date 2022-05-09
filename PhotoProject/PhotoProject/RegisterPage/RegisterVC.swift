@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-
+import FirebaseFirestore
 
 class RegisterVC: UIViewController {
 
@@ -19,12 +19,12 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var auth: Auth?
+    var firestore: Firestore?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        auth = Auth.auth()
-    
+        self.auth = Auth.auth()
+        self.firestore = Firestore.firestore()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,9 +38,19 @@ class RegisterVC: UIViewController {
             if let email = emailTextField.text{
                 if let password = passwordTextField.text{
                     
-                    auth?.createUser(withEmail: email, password: password) { (user, error) in
+                    auth?.createUser(withEmail: email, password: password) { (data, error) in
                         if error == nil{
-                            print("Sucesso ao cadastrar usuário")
+                            
+                            if let idUser = data?.user.uid{
+                                self.firestore?.collection("users")
+                                .document( idUser )
+                                .setData([
+                                    "name": name,
+                                    "email": email
+                                ])
+                            }
+                            
+                            
                         }else{
                             print("Erro ao cadastrar usuário")
                         }
