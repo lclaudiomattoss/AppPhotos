@@ -48,9 +48,9 @@ class ChoosePictureVC: UIViewController {
         if let imageUpLoad = selectedImage?.jpegData(compressionQuality: 0.3){
             let identificator = UUID().uuidString
             let postImageRef = images?
-            .child("post")
-            .child("\(identificator).jpg")
-                        
+                .child("post")
+                .child("\(identificator).jpg")
+            
             postImageRef?.putData(imageUpLoad, metadata: nil) { metaData, error in
                 if error == nil{
                     
@@ -60,7 +60,7 @@ class ChoosePictureVC: UIViewController {
                                 if let userLog = self.auth?.currentUser{
                                     
                                     let idUser = userLog.uid
-                                     
+                                    
                                     self.firestore?.collection("posts")
                                         .document(idUser)
                                         .collection("post_users")
@@ -72,13 +72,10 @@ class ChoosePictureVC: UIViewController {
                                                 self.navigationController?.popViewController(animated: true)
                                             }
                                         }
-                                    
-                                    
                                 }
                             }
                         }
                     })
-                    
                     print("Sucesso")
                 }else{
                     print("Erro ao fazer upload")

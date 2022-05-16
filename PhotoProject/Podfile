@@ -11,5 +11,6 @@ target 'PhotoProject' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'FirebaseUI'
+  pod 'Alamofire'
 
 end

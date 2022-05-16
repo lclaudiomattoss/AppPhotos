@@ -27,6 +27,48 @@ class UsersVC: UIViewController {
         super.viewDidLoad()
         configTableViewCell()
         self.firestore = Firestore.firestore()
+        self.userSearchBar.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.chooseImages()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GaleryVC"{
+            let viewDestine = segue.destination as? GaleryVC
+            
+            viewDestine?.user = sender as? Dictionary
+        }
+    }
+    
+    func searchUsers(text: String ){
+        let listFilter: [Dictionary<String, Any>] = self.users
+        self.users.removeAll()
+        
+        for item in listFilter{
+            if let name = item["name"] as? String{
+                if name.lowercased().contains(text.lowercased()){
+                    self.users.append(item)
+                }
+            }
+        }
+        self.userTableView.reloadData()
+    }
+    
+    func chooseImages(){
+        self.users.removeAll()
+        self.userTableView.reloadData()
+        
+        firestore?.collection("users").getDocuments{ snapshotResult, error in
+            if let snapshot = snapshotResult{
+                for document in snapshot.documents {
+                    let data = document.data()
+                    self.users.append(data)
+                }
+                self.userTableView.reloadData()
+            }
+        }
     }
     
 
@@ -40,8 +82,12 @@ extension UsersVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as? UserTableViewCell
         
-        cell?.nameLabel.text = "name"
-        cell?.emailLabel.text = "email"
+        let user = self.users[indexPath.row]
+        let name  = user["name"] as? String
+        let email = user["email"] as? String
+        
+        cell?.nameLabel.text = name
+        cell?.emailLabel.text =  email
 //        cell?.pictureImageView.image =
         
         return cell ?? UITableViewCell()
@@ -51,5 +97,32 @@ extension UsersVC: UITableViewDelegate, UITableViewDataSource{
         105
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.userTableView.deselectRow(at: indexPath, animated: true)
+        
+        let user = self.users[indexPath.row]
+        
+        self.performSegue(withIdentifier: "GaleryVC", sender: user)
+    }
+    
+}
+
+extension UsersVC: UISearchBarDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let textSearch = userSearchBar.text{
+            if textSearch != ""{
+                searchUsers(text: textSearch )
+            }
+        }
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            chooseImages()
+        }
+    }
     
 }

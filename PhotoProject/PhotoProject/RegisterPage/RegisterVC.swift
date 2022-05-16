@@ -46,7 +46,8 @@ class RegisterVC: UIViewController {
                                 .document( idUser )
                                 .setData([
                                     "name": name,
-                                    "email": email
+                                    "email": email,
+                                    "id": idUser
                                 ])
                             }
                             

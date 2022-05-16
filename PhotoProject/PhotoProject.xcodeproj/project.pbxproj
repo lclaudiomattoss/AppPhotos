@@ -28,6 +28,10 @@
 		A262AD332829689000299F60 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A262AD312829689000299F60 /* UserTableViewCell.xib */; };
 		A27BA377281D7E25000F8D6A /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */; };
 		A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27BA378281D7E45000F8D6A /* RegisterVC.swift */; };
+		A28104B02829DC0D0072D630 /* GaleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28104AF2829DC0D0072D630 /* GaleryVC.swift */; };
+		A28104B22829DC200072D630 /* GaleryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28104B12829DC200072D630 /* GaleryVC.storyboard */; };
+		A28104B62829DC540072D630 /* GaleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28104B42829DC540072D630 /* GaleryCollectionViewCell.swift */; };
+		A28104B72829DC540072D630 /* GaleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28104B52829DC540072D630 /* GaleryCollectionViewCell.xib */; };
 		A2F6645F2828D230002F4E81 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */; };
 		A2F664602828D230002F4E81 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,10 @@
 		A262AD312829689000299F60 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		A27BA376281D7E25000F8D6A /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		A27BA378281D7E45000F8D6A /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A28104AF2829DC0D0072D630 /* GaleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryVC.swift; sourceTree = "<group>"; };
+		A28104B12829DC200072D630 /* GaleryVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GaleryVC.storyboard; sourceTree = "<group>"; };
+		A28104B42829DC540072D630 /* GaleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A28104B52829DC540072D630 /* GaleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		A3541598C4442B89A3665A3C /* Pods-PhotoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoProject.debug.xcconfig"; path = "Target Support Files/Pods-PhotoProject/Pods-PhotoProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 		A22B9A23281D6A1400FC5357 /* PhotoProject */ = {
 			isa = PBXGroup;
 			children = (
+				A28104AE2829DBEB0072D630 /* Galery */,
 				A2183C1B2828567C00D0AA3E /* ChoosePicture */,
 				A24701A8282393590019BC7B /* TabBar */,
 				A22B9A3A281D6F4000FC5357 /* RegisterPage */,
@@ -202,6 +211,25 @@
 			path = UserCell;
 			sourceTree = "<group>";
 		};
+		A28104AE2829DBEB0072D630 /* Galery */ = {
+			isa = PBXGroup;
+			children = (
+				A28104B32829DC280072D630 /* GaleryCell */,
+				A28104AF2829DC0D0072D630 /* GaleryVC.swift */,
+				A28104B12829DC200072D630 /* GaleryVC.storyboard */,
+			);
+			path = Galery;
+			sourceTree = "<group>";
+		};
+		A28104B32829DC280072D630 /* GaleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				A28104B42829DC540072D630 /* GaleryCollectionViewCell.swift */,
+				A28104B52829DC540072D630 /* GaleryCollectionViewCell.xib */,
+			);
+			path = GaleryCell;
+			sourceTree = "<group>";
+		};
 		A2F6645C2828D1F0002F4E81 /* HomeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,11 +308,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28104B22829DC200072D630 /* GaleryVC.storyboard in Resources */,
 				A2F664602828D230002F4E81 /* HomeTableViewCell.xib in Resources */,
 				A22B9A31281D6A1600FC5357 /* LaunchScreen.storyboard in Resources */,
 				A22B9A2E281D6A1600FC5357 /* Assets.xcassets in Resources */,
 				A24701BD2823A40F0019BC7B /* ConfigVC.storyboard in Resources */,
 				A262AD332829689000299F60 /* UserTableViewCell.xib in Resources */,
+				A28104B72829DC540072D630 /* GaleryCollectionViewCell.xib in Resources */,
 				A2183C1D282856DA00D0AA3E /* ChoosePictureVC.storyboard in Resources */,
 				A24701B52823989B0019BC7B /* HomeVC.storyboard in Resources */,
 				A22B9A2C281D6A1400FC5357 /* Main.storyboard in Resources */,
@@ -364,10 +394,12 @@
 				A24701B0282394940019BC7B /* UsersVC.swift in Sources */,
 				A22B9A29281D6A1400FC5357 /* ViewController.swift in Sources */,
 				A24701AC282393930019BC7B /* HomeVC.swift in Sources */,
+				A28104B02829DC0D0072D630 /* GaleryVC.swift in Sources */,
 				A22B9A25281D6A1400FC5357 /* AppDelegate.swift in Sources */,
 				A262AD322829689000299F60 /* UserTableViewCell.swift in Sources */,
 				A24701BF2823A4250019BC7B /* ConfigVC.swift in Sources */,
 				A22B9A27281D6A1400FC5357 /* SceneDelegate.swift in Sources */,
+				A28104B62829DC540072D630 /* GaleryCollectionViewCell.swift in Sources */,
 				A2F6645F2828D230002F4E81 /* HomeTableViewCell.swift in Sources */,
 				A2183C1F2828571000D0AA3E /* ChoosePictureVC.swift in Sources */,
 				A27BA379281D7E45000F8D6A /* RegisterVC.swift in Sources */,
