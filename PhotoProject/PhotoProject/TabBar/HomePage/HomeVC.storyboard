@@ -17,31 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-WC-TfL">
-                                <rect key="frame" x="0.0" y="118" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBa-wB-13n">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="b7c-NC-Y0e"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="foto">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedPictureButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kdv-yN-IvR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tsX-WC-TfL" firstAttribute="top" secondItem="dBa-wB-13n" secondAttribute="bottom" id="3Rb-6c-EV7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dBa-wB-13n" secondAttribute="trailing" id="5gp-Rv-IUH"/>
-                            <constraint firstItem="dBa-wB-13n" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Hjd-Jz-ypm"/>
-                            <constraint firstItem="dBa-wB-13n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="M11-AS-LqX"/>
+                            <constraint firstItem="tsX-WC-TfL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DID-ef-n9g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tsX-WC-TfL" secondAttribute="trailing" id="VSV-r4-FZr"/>
                             <constraint firstItem="tsX-WC-TfL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nT4-82-ouP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tsX-WC-TfL" secondAttribute="bottom" id="qUX-dc-jNN"/>

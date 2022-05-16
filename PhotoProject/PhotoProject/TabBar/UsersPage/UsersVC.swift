@@ -22,12 +22,20 @@ class UsersVC: UIViewController {
         self.userTableView.separatorStyle = .none
         self.userTableView.register(UserTableViewCell.nib(), forCellReuseIdentifier: UserTableViewCell.identifier)
     }
+    
+    func configItems(){
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.myColor]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationItem.title = "Usuários"
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableViewCell()
         self.firestore = Firestore.firestore()
         self.userSearchBar.delegate = self
+        self.configItems()
     }
     
     override func viewDidAppear(_ animated: Bool) {

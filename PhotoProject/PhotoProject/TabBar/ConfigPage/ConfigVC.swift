@@ -9,10 +9,16 @@ import UIKit
 
 class ConfigVC: UIViewController {
 
+    func configItems(){
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.myColor]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationItem.title = "Configurações"
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configItems()
     }
     
 
