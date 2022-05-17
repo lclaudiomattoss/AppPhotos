@@ -26,10 +26,6 @@ class HomeVC: UIViewController {
         self.homeTableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     
-    func StyleTB(){
-        UITabBar.appearance().backgroundColor = UIColor.black
-    }
-    
     @objc private func tappedCamera(){
         performSegue(withIdentifier: "ChoosePictureVC", sender: nil)
     }
@@ -38,6 +34,7 @@ class HomeVC: UIViewController {
     func configItems(){
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.myColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.myColor
         self.navigationItem.title = "Minhas Imagens"
         self.navigationController?.navigationBar.tintColor = UIColor.myColor
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -53,7 +50,6 @@ class HomeVC: UIViewController {
         configTableViewCell()
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
-        self.StyleTB()
         self.configItems()
         
         if let idUser = auth?.currentUser?.uid{

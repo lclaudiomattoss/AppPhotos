@@ -33,6 +33,7 @@
 		A28104B22829DC200072D630 /* GaleryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28104B12829DC200072D630 /* GaleryVC.storyboard */; };
 		A28104B62829DC540072D630 /* GaleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28104B42829DC540072D630 /* GaleryCollectionViewCell.swift */; };
 		A28104B72829DC540072D630 /* GaleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28104B52829DC540072D630 /* GaleryCollectionViewCell.xib */; };
+		A2D84960283353AD00E1BCB2 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8495F283353AD00E1BCB2 /* AlertController.swift */; };
 		A2F6645F2828D230002F4E81 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */; };
 		A2F664602828D230002F4E81 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		A28104B12829DC200072D630 /* GaleryVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GaleryVC.storyboard; sourceTree = "<group>"; };
 		A28104B42829DC540072D630 /* GaleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A28104B52829DC540072D630 /* GaleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A2D8495F283353AD00E1BCB2 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A2F6645D2828D230002F4E81 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		A2F6645E2828D230002F4E81 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		A3541598C4442B89A3665A3C /* Pods-PhotoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoProject.debug.xcconfig"; path = "Target Support Files/Pods-PhotoProject/Pods-PhotoProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A23C2C682832DF6900030784 /* UIColor.swift */,
+				A2D8495F283353AD00E1BCB2 /* AlertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				A22B9A29281D6A1400FC5357 /* ViewController.swift in Sources */,
 				A24701AC282393930019BC7B /* HomeVC.swift in Sources */,
 				A28104B02829DC0D0072D630 /* GaleryVC.swift in Sources */,
+				A2D84960283353AD00E1BCB2 /* AlertController.swift in Sources */,
 				A22B9A25281D6A1400FC5357 /* AppDelegate.swift in Sources */,
 				A262AD322829689000299F60 /* UserTableViewCell.swift in Sources */,
 				A24701BF2823A4250019BC7B /* ConfigVC.swift in Sources */,

@@ -94,6 +94,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="idm-d8-L78" id="nYk-YO-6cG"/>
                         <outlet property="enterButton" destination="fpC-Ug-DjZ" id="NXs-iW-cvt"/>
+                        <outlet property="errorLabel" destination="UJR-kS-PfC" id="DTe-BO-f3L"/>
                         <outlet property="passwordTextField" destination="0s1-nr-ZzG" id="frC-8n-U7Z"/>
                         <outlet property="registerButton" destination="b5n-Kd-4du" id="ZV5-M7-ePc"/>
                         <segue destination="5iB-pI-uNR" kind="show" identifier="RegisterVC" id="kaV-yr-B8V"/>
