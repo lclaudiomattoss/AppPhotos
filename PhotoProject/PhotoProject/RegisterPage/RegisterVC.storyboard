@@ -19,15 +19,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Design sem nome" translatesAutoresizingMaskIntoConstraints="NO" id="zst-tq-vg2">
                                 <rect key="frame" x="0.0" y="-19" width="414" height="915"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PicGram" translatesAutoresizingMaskIntoConstraints="NO" id="REy-Ee-itR">
-                                <rect key="frame" x="95" y="182" width="224" height="180"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="REy-Ee-itR">
+                                <rect key="frame" x="142" y="182.5" width="130" height="129"/>
+                                <color key="tintColor" red="0.0039912019860000002" green="0.75928205250000003" blue="0.79672938589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="j7R-Ku-zEe"/>
-                                    <constraint firstAttribute="width" constant="224" id="w4m-gV-FwE"/>
+                                    <constraint firstAttribute="height" constant="130" id="j7R-Ku-zEe"/>
+                                    <constraint firstAttribute="width" constant="130" id="w4m-gV-FwE"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zYq-DX-SHX">
-                                <rect key="frame" x="40" y="362" width="334" height="236.5"/>
+                                <rect key="frame" x="40" y="383" width="334" height="236.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1Q-vg-1KY">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -69,16 +70,27 @@
                                     <constraint firstItem="ue1-OH-e8z" firstAttribute="height" secondItem="X1Q-vg-1KY" secondAttribute="height" id="v0l-3Z-sPt"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bp-q4-Ovk">
+                                <rect key="frame" x="117.5" y="332" width="179" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.47859339283585528" blue="0.5032146229429284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Selecionar foto de perfil"/>
+                                <connections>
+                                    <action selector="tappedChoosePictureButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="i3v-Mt-nc0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zst-tq-vg2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6xg-Bi-m8J"/>
                             <constraint firstItem="zst-tq-vg2" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-19" id="9be-pz-XLK"/>
-                            <constraint firstItem="zYq-DX-SHX" firstAttribute="top" secondItem="REy-Ee-itR" secondAttribute="bottom" id="FrP-3G-eLQ"/>
+                            <constraint firstItem="3bp-q4-Ovk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GKk-L4-PxM"/>
+                            <constraint firstItem="zYq-DX-SHX" firstAttribute="top" secondItem="3bp-q4-Ovk" secondAttribute="bottom" constant="20" id="Mbf-qk-69j"/>
                             <constraint firstItem="REy-Ee-itR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="138" id="Vim-3U-rvp"/>
                             <constraint firstAttribute="bottom" secondItem="zst-tq-vg2" secondAttribute="bottom" id="WGm-Ct-SZS"/>
                             <constraint firstItem="zYq-DX-SHX" firstAttribute="centerX" secondItem="REy-Ee-itR" secondAttribute="centerX" id="hSV-jd-FfL"/>
+                            <constraint firstItem="3bp-q4-Ovk" firstAttribute="top" secondItem="REy-Ee-itR" secondAttribute="bottom" constant="20" id="iGO-ja-4Kv"/>
                             <constraint firstItem="zst-tq-vg2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ioa-RZ-MBF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zYq-DX-SHX" secondAttribute="trailing" constant="40" id="tXb-0n-WkC"/>
                             <constraint firstItem="zYq-DX-SHX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="xmp-QU-7da"/>
@@ -86,10 +98,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="choosePictureButton" destination="3bp-q4-Ovk" id="KS1-Na-fn1"/>
                         <outlet property="emailTextField" destination="ue1-OH-e8z" id="F3V-qe-ozS"/>
                         <outlet property="errorLabel" destination="23W-ef-QsQ" id="T8S-JW-Zwh"/>
                         <outlet property="nameTextField" destination="X1Q-vg-1KY" id="Dpa-LC-Uzj"/>
                         <outlet property="passwordTextField" destination="fF6-8u-wtN" id="rgB-De-s6W"/>
+                        <outlet property="profileImageView" destination="REy-Ee-itR" id="ljG-a0-hY1"/>
                         <outlet property="registerButton" destination="GTD-7b-rQ4" id="HD4-yb-92Y"/>
                         <segue destination="grU-dy-Thc" kind="show" identifier="Main" id="Rm6-GJ-dGU"/>
                     </connections>
@@ -111,7 +125,7 @@
     </scenes>
     <resources>
         <image name="Design sem nome" width="1080" height="1920"/>
-        <image name="PicGram" width="500" height="500"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

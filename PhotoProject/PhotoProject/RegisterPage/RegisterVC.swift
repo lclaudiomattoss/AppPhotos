@@ -8,24 +8,29 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class RegisterVC: UIViewController {
 
-    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var choosePictureButton: UIButton!
     
     var auth: Auth?
     var firestore: Firestore?
+    var storage: Storage?
+    var imagePicker = UIImagePickerController()
     private var alert:AlertController?
     
     func configInitials(){
         self.nameTextField.delegate = self
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        self.imagePicker.delegate = self
         self.registerButton.isEnabled = false
         self.errorLabel.text = ""
         self.hideKeyboardWhenTappedAround()
@@ -36,6 +41,7 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         self.auth = Auth.auth()
         self.firestore = Firestore.firestore()
+        self.storage = Storage.storage()
         self.configInitials()
     }
     
@@ -43,40 +49,63 @@ class RegisterVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-
+    @IBAction func tappedChoosePictureButton(_ sender: UIButton) {
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+           
+        let images = storage?.reference()
+            .child("images")
+        let selectedImage = self.profileImageView.image
         
-        if let name = nameTextField.text{
-            if let email = emailTextField.text{
-                if let password = passwordTextField.text{
-                    self.alert?.showAlert(title: "Confirma os dados?", message: "", titleButton: "Confirmar", completion: { value in
-                        switch value {
-                        case .aceitar:
-                            self.auth?.createUser(withEmail: email, password: password) { (data, error) in
-                                if error == nil{
-                                    if let idUser = data?.user.uid{
-                                        self.firestore?.collection("users")
-                                            .document( idUser )
-                                            .setData([
-                                                "name": name,
-                                                "email": email,
-                                                "id": idUser
-                                            ])
-                                    }
-                                }
-                            }
-                            self.dismiss(animated: true)
-                        case .cancel:
-                            print("cancelado")
+        if let imageUpLoad = selectedImage?.jpegData(compressionQuality: 0.3){
+            let identificator = UUID().uuidString
+            let postImageRef = images?
+                .child("post")
+                .child("\(identificator).jpg")
+            
+            postImageRef?.putData(imageUpLoad, metadata: nil) { metaData, error in
+                if error == nil{
+                    
+                    postImageRef?.downloadURL(completion: { url, error in
+                        if let urlImage = url?.absoluteString, let name = self.nameTextField.text, let email = self.emailTextField.text, let password = self.passwordTextField.text{
+                                        self.alert?.showAlert(title: "Confirma os dados?", message: "", titleButton: "Confirmar", completion: { value in
+                                            switch value {
+                                            case .aceitar:
+                                                self.auth?.createUser(withEmail: email, password: password) { (data, error) in
+                                                    if error == nil{
+                                                        if let idUser = data?.user.uid{
+                                                            self.firestore?.collection("users")
+                                                                .document( idUser )
+                                                                .setData([
+                                                                    "name": name,
+                                                                    "email": email,
+                                                                    "id": idUser,
+                                                                    "url": urlImage
+                                                                ])
+                                                        }
+                                                    }
+                                                }
+                                                self.nameTextField.text = ""
+                                                self.emailTextField.text = ""
+                                                self.passwordTextField.text = ""
+                                                self.profileImageView.image = UIImage(systemName: "person.circle.fill")
+                                            case .cancel:
+                                                print("cancelado")
+                                            }
+                                        })
+                                        self.errorLabel.text = ""
+                        }else{
+                            print("Error")
                         }
                     })
-                    self.errorLabel.text = ""
+                    print("Sucesso")
+                }else{
+                    print("Erro ao fazer upload")
                 }
-            }else{
-                self.errorLabel.text = "Erro ao cadastrar usuário"
             }
-        }else{
-            self.errorLabel.text = "Preencha os dados corretamente"
         }
     }
 }
@@ -144,3 +173,12 @@ extension RegisterVC:UITextFieldDelegate{
     
 }
 
+extension RegisterVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let choosedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.profileImageView.image = choosedImage
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+}

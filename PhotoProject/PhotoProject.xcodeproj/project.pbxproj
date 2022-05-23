@@ -95,13 +95,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A2033DED282343F400A0D5EC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A2183C1B2828567C00D0AA3E /* ChoosePicture */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +131,6 @@
 				A24701A8282393590019BC7B /* TabBar */,
 				A22B9A3A281D6F4000FC5357 /* RegisterPage */,
 				A22B9A39281D6F3A00FC5357 /* LoginPage */,
-				A2033DED282343F400A0D5EC /* Model */,
 				A22B9A24281D6A1400FC5357 /* AppDelegate.swift */,
 				A22B9A26281D6A1400FC5357 /* SceneDelegate.swift */,
 				A22B9A2D281D6A1600FC5357 /* Assets.xcassets */,
