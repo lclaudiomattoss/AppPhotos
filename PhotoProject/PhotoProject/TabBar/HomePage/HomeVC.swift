@@ -17,7 +17,10 @@ class HomeVC: UIViewController {
     var firestore: Firestore?
     var auth: Auth?
     var posts: [Dictionary<String, Any>] = []
+    var nameUser: String?
+    var urlUser:String?
     var idUserLog: String?
+    var datas = [String]()
     
     private func configTableViewCell(){
         self.homeTableView.delegate = self
@@ -51,17 +54,18 @@ class HomeVC: UIViewController {
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
         self.configItems()
-        
-        if let idUser = auth?.currentUser?.uid{
-            self.idUserLog = idUser
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.chooseImages()
+        self.getProfileData()
     }
     
     func chooseImages(){
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
+        
         self.posts.removeAll()
         self.homeTableView.reloadData()
         
@@ -79,7 +83,21 @@ class HomeVC: UIViewController {
                 }
                 
             }
+    }
+    
+    func getProfileData(){
         
+        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
+        user?.getDocument(completion: { documentSnapshot, error in
+            if error == nil{
+                
+                let data1 = documentSnapshot?.data()
+                let data2 = data1?["name"]
+                self.nameUser = data2 as? String
+                self.urlUser = data1?["url"] as? String
+            }
+        }
+        )
     }
 
 }
@@ -98,14 +116,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         if let url = post["url"] as? String{
             cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
         }
-        
+        cell?.profileImageView.sd_setImage(with: URL(string: self.urlUser ?? ""), completed: nil)
+        cell?.nameLabel.text = self.nameUser
         cell?.descriptionLabel.text = description
- 
+        
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        400
+        440
     }
-    
+   
 }

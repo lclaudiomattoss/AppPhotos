@@ -17,10 +17,17 @@ class UserTableViewCell: UITableViewCell {
     static func nib()-> UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
+    
+    public func maskCircle(){
+        pictureImageView.layer.borderWidth = 1
+        pictureImageView.layer.masksToBounds = false
+        pictureImageView.layer.cornerRadius = pictureImageView.frame.height/2
+        pictureImageView.clipsToBounds = true
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.maskCircle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

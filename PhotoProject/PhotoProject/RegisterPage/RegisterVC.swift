@@ -37,12 +37,20 @@ class RegisterVC: UIViewController {
         self.alert = AlertController(controller: self)
     }
     
+    public func maskCircle(){
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.auth = Auth.auth()
         self.firestore = Firestore.firestore()
         self.storage = Storage.storage()
         self.configInitials()
+        self.maskCircle()
     }
     
     override func viewWillAppear(_ animated: Bool) {

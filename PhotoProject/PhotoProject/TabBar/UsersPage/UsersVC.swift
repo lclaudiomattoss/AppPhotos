@@ -93,10 +93,12 @@ extension UsersVC: UITableViewDelegate, UITableViewDataSource{
         let user = self.users[indexPath.row]
         let name  = user["name"] as? String
         let email = user["email"] as? String
+        if let url = user["url"] as? String{
+            cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
+        }
         
         cell?.nameLabel.text = name
         cell?.emailLabel.text =  email
-//        cell?.pictureImageView.image =
         
         return cell ?? UITableViewCell()
     }

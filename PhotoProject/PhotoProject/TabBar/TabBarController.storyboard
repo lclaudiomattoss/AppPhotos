@@ -50,21 +50,21 @@
             </objects>
             <point key="canvasLocation" x="-352" y="406"/>
         </scene>
-        <!--ConfigVC-->
+        <!--ProfileVC-->
         <scene sceneID="xJK-nl-hDn">
             <objects>
-                <viewControllerPlaceholder storyboardName="ConfigVC" id="8uu-Js-InW" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProfileVC" id="8uu-Js-InW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eLC-TG-46C"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALc-iu-aWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1249" y="72"/>
         </scene>
-        <!--Ajustes-->
+        <!--Perfil-->
         <scene sceneID="gEh-WL-E1b">
             <objects>
                 <navigationController id="s7a-6u-JZJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ajustes" image="power.circle.fill" catalog="system" id="77a-fg-vkZ"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person.circle.fill" catalog="system" id="77a-fg-vkZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oiV-Ga-jDQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,6 +113,6 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="power.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
