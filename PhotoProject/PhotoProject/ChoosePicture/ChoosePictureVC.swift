@@ -81,9 +81,9 @@ class ChoosePictureVC: UIViewController {
                     print("Erro ao fazer upload")
                 }
             }
-            
-            
         }
+        
+        
         
     }
     

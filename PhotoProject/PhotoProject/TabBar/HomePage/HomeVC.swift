@@ -13,6 +13,7 @@ import FirebaseStorageUI
 class HomeVC: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
     
     var firestore: Firestore?
     var auth: Auth?
@@ -47,6 +48,11 @@ class HomeVC: UIViewController {
             action: #selector(tappedCamera)
         )
     }
+    
+    func loading(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.loadingView.isHidden = true }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +60,7 @@ class HomeVC: UIViewController {
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
         self.configItems()
+        self.loading()
     }
     
     override func viewDidAppear(_ animated: Bool) {

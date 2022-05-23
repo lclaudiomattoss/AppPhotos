@@ -12,6 +12,7 @@ class UsersVC: UIViewController {
     
     @IBOutlet weak var userSearchBar: UISearchBar!
     @IBOutlet weak var userTableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
     
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
@@ -29,6 +30,10 @@ class UsersVC: UIViewController {
         self.navigationItem.title = "Usuários"
     }
 
+    func loading(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.loadingView.isHidden = true }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,7 @@ class UsersVC: UIViewController {
         self.firestore = Firestore.firestore()
         self.userSearchBar.delegate = self
         self.configItems()
+        self.loading()
     }
     
     override func viewDidAppear(_ animated: Bool) {

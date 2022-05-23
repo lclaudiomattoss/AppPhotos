@@ -78,35 +78,37 @@ class RegisterVC: UIViewController {
                 if error == nil{
                     
                     postImageRef?.downloadURL(completion: { url, error in
-                        if let urlImage = url?.absoluteString, let name = self.nameTextField.text, let email = self.emailTextField.text, let password = self.passwordTextField.text{
-                                        self.alert?.showAlert(title: "Confirma os dados?", message: "", titleButton: "Confirmar", completion: { value in
-                                            switch value {
-                                            case .aceitar:
-                                                self.auth?.createUser(withEmail: email, password: password) { (data, error) in
-                                                    if error == nil{
-                                                        if let idUser = data?.user.uid{
-                                                            self.firestore?.collection("users")
-                                                                .document( idUser )
-                                                                .setData([
-                                                                    "name": name,
-                                                                    "email": email,
-                                                                    "id": idUser,
-                                                                    "url": urlImage
-                                                                ])
-                                                        }
-                                                    }
+                        if let urlImage = url?.absoluteString {
+                            if let name = self.nameTextField.text, let email = self.emailTextField.text, let password = self.passwordTextField.text{
+                                self.alert?.showAlert(title: "Confirma os dados?", message: "", titleButton: "Confirmar", completion: { value in
+                                    switch value {
+                                    case .aceitar:
+                                        self.auth?.createUser(withEmail: email, password: password) { (data, error) in
+                                            if error == nil{
+                                                if let idUser = data?.user.uid{
+                                                    self.firestore?.collection("users")
+                                                        .document( idUser )
+                                                        .setData([
+                                                            "name": name,
+                                                            "email": email,
+                                                            "id": idUser,
+                                                            "url": urlImage
+                                                        ])
                                                 }
-                                                self.nameTextField.text = ""
-                                                self.emailTextField.text = ""
-                                                self.passwordTextField.text = ""
-                                                self.profileImageView.image = UIImage(systemName: "person.circle.fill")
-                                            case .cancel:
-                                                print("cancelado")
                                             }
-                                        })
-                                        self.errorLabel.text = ""
-                        }else{
-                            print("Error")
+                                        }
+                                        self.nameTextField.text = ""
+                                        self.emailTextField.text = ""
+                                        self.passwordTextField.text = ""
+                                        self.profileImageView.image = UIImage(systemName: "person.circle.fill")
+                                    case .cancel:
+                                        print("cancelado")
+                                    }
+                                })
+                                self.errorLabel.text = ""
+                            }else{
+                                print("Error")
+                            }
                         }
                     })
                     print("Sucesso")
@@ -115,7 +117,10 @@ class RegisterVC: UIViewController {
                 }
             }
         }
-    }
+        
+        
+                    }
+
 }
 
 extension RegisterVC:UITextFieldDelegate{

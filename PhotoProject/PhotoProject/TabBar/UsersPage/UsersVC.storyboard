@@ -24,6 +24,23 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" id="3Io-lC-TVN">
+                                <rect key="frame" x="-26" y="-35" width="469" height="984"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-bR-iw2">
+                                        <rect key="frame" x="50" y="50" width="369" height="884"/>
+                                        <color key="color" red="0.0" green="0.3035449127" blue="0.32158849639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="rNa-bR-iw2" firstAttribute="leading" secondItem="3Io-lC-TVN" secondAttribute="leading" constant="50" id="Bpd-bQ-EYh"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNa-bR-iw2" secondAttribute="trailing" constant="50" id="RpB-B0-WSG"/>
+                                    <constraint firstAttribute="bottom" secondItem="rNa-bR-iw2" secondAttribute="bottom" constant="50" id="Vfl-Qv-Gaf"/>
+                                    <constraint firstItem="rNa-bR-iw2" firstAttribute="top" secondItem="3Io-lC-TVN" secondAttribute="top" constant="50" id="qDS-CA-mt3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,6 +55,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="3Io-lC-TVN" id="KoI-Jf-Xml"/>
                         <outlet property="userSearchBar" destination="VbK-9e-gUR" id="4Sp-gS-ls1"/>
                         <outlet property="userTableView" destination="HV9-bI-hgw" id="Xsb-6o-vW0"/>
                         <segue destination="Uz8-vH-klT" kind="show" identifier="GaleryVC" id="WSY-7C-tHZ"/>
@@ -45,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="49"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="48.883928571428569"/>
         </scene>
         <!--GaleryVC-->
         <scene sceneID="ct8-wy-OVc">

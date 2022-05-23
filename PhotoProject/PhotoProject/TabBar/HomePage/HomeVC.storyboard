@@ -21,6 +21,25 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.0" green="0.47859339280000002" blue="0.50321462289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
+                            <view contentMode="scaleToFill" id="pab-PJ-vBw">
+                                <rect key="frame" x="-47" y="-48" width="509" height="979"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-Cv-xoJ">
+                                        <rect key="frame" x="50" y="50" width="409" height="879"/>
+                                        <color key="color" red="0.0" green="0.3035449127" blue="0.32158849639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ogo-Cv-xoJ" firstAttribute="centerY" secondItem="pab-PJ-vBw" secondAttribute="centerY" id="1U6-vr-uiM"/>
+                                    <constraint firstItem="ogo-Cv-xoJ" firstAttribute="centerX" secondItem="pab-PJ-vBw" secondAttribute="centerX" id="Bzi-AB-gDM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ogo-Cv-xoJ" secondAttribute="trailing" constant="50" id="JUu-U4-z9j"/>
+                                    <constraint firstItem="ogo-Cv-xoJ" firstAttribute="leading" secondItem="pab-PJ-vBw" secondAttribute="leading" constant="50" id="LL1-eN-dW3"/>
+                                    <constraint firstAttribute="bottom" secondItem="ogo-Cv-xoJ" secondAttribute="bottom" constant="50" id="esO-Hd-Git"/>
+                                    <constraint firstItem="ogo-Cv-xoJ" firstAttribute="top" secondItem="pab-PJ-vBw" secondAttribute="top" constant="50" id="gnf-zb-KDR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="homeTableView" destination="tsX-WC-TfL" id="shA-xd-1fx"/>
+                        <outlet property="loadingView" destination="pab-PJ-vBw" id="UZ3-Ve-zKT"/>
                         <segue destination="Lyv-zf-Op9" kind="show" identifier="ChoosePictureVC" id="VWV-3Q-2TQ"/>
                     </connections>
                 </viewController>

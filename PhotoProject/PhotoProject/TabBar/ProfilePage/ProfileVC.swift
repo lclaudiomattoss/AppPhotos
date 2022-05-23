@@ -14,7 +14,7 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var postsLabel: UILabel!
+    @IBOutlet weak var loadingView: UIView!
     
     var firestore: Firestore?
     var auth: Auth?
@@ -52,6 +52,11 @@ class ProfileVC: UIViewController {
         profileImageView.clipsToBounds = true
     }
     
+    func loading(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.loadingView.isHidden = true }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configItems()
@@ -61,6 +66,7 @@ class ProfileVC: UIViewController {
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
+        self.loading()
     }
     
     override func viewDidAppear(_ animated: Bool) {
